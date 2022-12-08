@@ -1,19 +1,14 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import {useDispatch, useSelector} from "react-redux";
-import { Link } from "react-router-dom";
 import Card from "../Card/Card.jsx"
 import SearchBar from "../SearchBar/SearchBar.jsx"
 import Footer from "../Footer/Footer.jsx"
 import Navbar from "../Navbar/Navbar.jsx";
 import { getMovies } from "../../redux/actions/index.js";
 
-/* import Typography from '@mui/material/Typography' */
-
 export default function Home (){
-
     const dispatch = useDispatch();
-
     const allMovies = useSelector (state => state.pelisfiltradas);
 
     useEffect(()=>{

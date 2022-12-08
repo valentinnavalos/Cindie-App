@@ -11,7 +11,6 @@ export default function Profile() {
     return (
         <div>
             <div>
-                {/* div provisorio */}
                 <Link to={'/'}>Home (link provisorio)</Link>
             </div>
             <div>

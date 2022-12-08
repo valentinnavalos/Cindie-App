@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Contact(){ //los parametros son los que quiero que aparezcan en la card
+export default function Contact(){
     return (
         <h1>Contacto</h1>
     )

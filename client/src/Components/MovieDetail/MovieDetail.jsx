@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router";
 import Footer from "../Footer/Footer.jsx"
 import Navbar from "../Navbar/Navbar.jsx";
 
 export default function MovieDetail() {
   const [movie, setMovie] = useState(null);
-  let { id } = useParams();
+
   useEffect(() => {
     axios.get("http://localhost:3001/api/films/").then((response) => {
       setMovie(response.data);
@@ -15,6 +14,7 @@ export default function MovieDetail() {
       setMovie(null);
     };
   }, []);
+
   let peli = movie[0];
   let elenco =peli.mainActors;
 
